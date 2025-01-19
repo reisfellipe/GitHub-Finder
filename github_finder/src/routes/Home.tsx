@@ -18,11 +18,15 @@ const Home = () => {
             following,
         };
 
-    }
+        setUser(userData);
+
+    };
 
     return (
         <div>
             <Search loadUser={loadUser}/>
+            {user && <p>{user.login}</p>
+    }
         </div>
     )
 }
